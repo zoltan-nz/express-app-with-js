@@ -7,6 +7,7 @@
     "format": "semistandard --fix | snazzy"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.5",
     "debug": "~4.3.2",
     "express": "~4.17.1",
@@ -14,7 +15,18 @@
     "morgan": "~1.10.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "jest": "^27.1.0",
     "semistandard": "^16.0.1",
-    "snazzy": "^9.0.0"
+    "snazzy": "^9.0.0",
+    "supertest": "^6.1.6"
+  },
+  "semistandard": {
+    "env": [
+      "node",
+      "commonjs",
+      "es2021",
+      "jest"
+    ]
   }
 }

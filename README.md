@@ -6,8 +6,9 @@ Tasks
 
 - [x] Add semistandard
 - [x] Remove view, jade
+- [x] Add testing, Jest
+- [ ] Improve DX with autoreload, linting and test watcher
 - [ ] Add json parser
-- [ ] Add testing, Jest
 - [ ] Add log manager: pino, pino-pretty, express-pino-logger, pino-debug
 - [ ] Add authentication
 - [ ] Add graphql
