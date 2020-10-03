@@ -1,4 +1,5 @@
 const app = require('./app');
+const listEndpoints = require('express-list-endpoints');
 
 const DEFAULT_PORT = 3000;
 
@@ -14,3 +15,4 @@ app.on('error', onError);
 app.on('listening', onListening);
 
 console.log(app.settings);
+console.log(listEndpoints(app));

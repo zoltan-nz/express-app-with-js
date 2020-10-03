@@ -5,12 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-
-/** @type import('express').ErrorRequestHandler */
-const errorHandler = (err, req, res, next) => {
-  res.status(err.status || 500);
-  res.send({ err });
-};
+const errorHandler = require('errorhandler');
 
 const app = express();
 
