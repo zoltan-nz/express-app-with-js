@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=* nodemon ./src/server.js",
-    "dev": "run-p lint:watch test:watch",
+    "clean": "del ./coverage",
+    "server": "node ./src/bin/run.js",
+    "server:watch": "NODE_ENV=development nodemon -w ./ -x run-s server",
+    "start": "NODE_ENV=development run-s clean server",
+    "start:prod": "NODE_ENV=production run-s clean server",
+    "dev": "NODE_ENV=development concurrently --names 'LINT,TEST,SERVER' -c 'yellow,blue,magenta' 'run-s lint:watch' 'run-s test:watch' 'run-s server:watch'",
     "lint": "eslint .",
     "lint:watch": "chokidar './src/**' --silent --initial -c 'run-s lint'",
     "format": "eslint . --fix",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest --colors --coverage",
+    "test:watch": "CI=true jest --colors --watchAll"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -28,6 +32,8 @@
     "@types/superagent": "^4.1.12",
     "@types/supertest": "^2.0.11",
     "chokidar-cli": "^3.0.0",
+    "concurrently": "^6.2.1",
+    "del-cli": "^4.0.1",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",

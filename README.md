@@ -4,10 +4,10 @@ Express App Playground
 
 Tasks
 
-- [x] Add semistandard
+- [x] Add semistandard rules using eslint
 - [x] Remove view, jade
 - [x] Add testing, Jest
-- [ ] Improve DX with autoreload, linting and test watcher
+- [x] Improve DX with autoreload, linting and test watcher (using concurrently, nodemon, chokidar-cli npm-run-all)
 - [ ] Add json parser
 - [ ] Add log manager: pino, pino-pretty, express-pino-logger, pino-debug
 - [ ] Add authentication
