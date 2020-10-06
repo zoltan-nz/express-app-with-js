@@ -13,7 +13,9 @@
     "lint:watch": "chokidar './src/**' --silent --initial -c 'run-s lint'",
     "format": "eslint . --fix",
     "test": "jest --colors --coverage",
-    "test:watch": "CI=true jest --colors --watchAll"
+    "test:watch": "CI=true jest --colors --watchAll",
+    "prepare": "husky install",
+    "verify": "CI=true run-p lint test"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -39,6 +41,7 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
+    "husky": "^7.0.2",
     "jest": "^27.1.0",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",

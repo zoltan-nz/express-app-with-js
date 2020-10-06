@@ -8,6 +8,7 @@ Tasks
 - [x] Remove view, jade
 - [x] Add testing, Jest
 - [x] Improve DX with autoreload, linting and test watcher (using concurrently, nodemon, chokidar-cli npm-run-all)
+- [x] Add Husky pre commit checks
 - [ ] Add json parser
 - [ ] Add log manager: pino, pino-pretty, express-pino-logger, pino-debug
 - [ ] Add authentication
