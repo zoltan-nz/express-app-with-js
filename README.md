@@ -4,11 +4,12 @@ Express App Playground
 
 Tasks
 
-- [x] Add semistandard rules using eslint
-- [x] Remove view, jade
-- [x] Add testing, Jest
-- [x] Improve DX with autoreload, linting and test watcher (using concurrently, nodemon, chokidar-cli npm-run-all)
-- [x] Add Husky pre commit checks
+- [x] Format: Add semistandard rules using eslint
+- [x] Cleanup: Remove view, jade
+- [x] Test: Add testing, Jest
+- [x] DX: Improve DX with autoreload, linting and test watcher (using concurrently, nodemon, chokidar-cli npm-run-all)
+- [x] DX: Add Husky pre commit checks
+- [ ] Separate app runner, express app, middlewares, server listener and cover with tests
 - [ ] Add json parser
 - [ ] Add log manager: pino, pino-pretty, express-pino-logger, pino-debug
 - [ ] Add authentication
@@ -32,4 +33,4 @@ npm add -D semistandard snazzy
 ### Dependency Injection in Node.js
 
 - https://tsh.io/blog/dependency-injection-in-node-js/
-- 
+-
