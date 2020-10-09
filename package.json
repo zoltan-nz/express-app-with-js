@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chalk": "^4.1.2",
     "errorhandler": "^1.5.1",
     "express": "~4.17.1",
     "express-list-endpoints": "^6.0.0",
@@ -45,6 +46,7 @@
     "jest": "^27.1.0",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",
-    "supertest": "^6.1.6"
+    "supertest": "^6.1.6",
+    "typescript": "^4.4.3"
   }
 }

@@ -6,11 +6,11 @@ const createExpressApp = require('../create-express-app');
 const addGlobalMiddlewares = require('../add-global-middlewares');
 const addRouters = require('../add-routers');
 const { Environment } = require('../models/environment');
-const createExpressServer = require('../create-express-server');
+const launchExpressServer = require('../launch-express-server');
 
 (() => {
   const { NODE_ENV, PORT } = process.env;
-  if (!NODE_ENV) throw Error(`Please setup NODE_ENV environment variable. Valid values: ${Environment}`);
+  if (!NODE_ENV) throw Error('Please setup NODE_ENV environment variable');
   if (!PORT) throw Error('Please setup PORT environment variable');
 
   const app = createExpressApp(NODE_ENV);
@@ -23,5 +23,5 @@ const createExpressServer = require('../create-express-server');
     console.info(listEndpoints(app));
   }
 
-  createExpressServer(app, PORT);
+  launchExpressServer(app, PORT);
 })();
