@@ -1,6 +1,6 @@
 const supertest = require('supertest');
-const createExpressApp = require('../create-express-app');
-const { Environment } = require('../models/environment');
+const createExpressApp = require('./create-express-app');
+const { Environment } = require('./models/environment');
 
 it('should create an express app', () => {
   const app = createExpressApp(Environment.DEVELOPMENT);

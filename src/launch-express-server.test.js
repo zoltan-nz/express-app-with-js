@@ -1,6 +1,6 @@
 const { createServer } = require('net');
 const express = require('express');
-const launchExpressServer = require('../launch-express-server');
+const launchExpressServer = require('./launch-express-server');
 
 /**
  *
